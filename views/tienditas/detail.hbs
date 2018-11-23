@@ -3,7 +3,16 @@
   <h3>{{giro}}</h3>
   <h5>{{owner}}</h5>
   <hr>
-  <a href="/productos/new/{{_id}}">Agrega productos</a>
+  <h2>Productos:</h2>
+  <ul>
+    {{#each products}}
+      <li>
+        <a href="/productos/detail/{{this._id}}">{{this.name}}</a>
+      </li>
+    {{/each}}
+  </ul>
+  <a href="/productos/new/{{_id}}">Agrega productos aquí</a>
+  <hr>
   <a href="/tienditas/update/{{_id}}">Editar</a>
   <a href="/tienditas/delete/{{_id}}">Borrar</a>
 </div>

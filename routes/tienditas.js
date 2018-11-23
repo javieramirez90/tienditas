@@ -33,7 +33,7 @@ router.get('/', (req, res, next) =>{
 //Tienditas detail
 router.get('/detail/:id', (req, res, next) => {
   const {id} = req.params
-  Tiendita.findById(id)
+  Tiendita.findById(id).populate('products')
     .then(tiendita => {
       res.render('tienditas/detail', tiendita)
     })
