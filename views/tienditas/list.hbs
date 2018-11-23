@@ -1,0 +1,7 @@
+<h1>Lista de tienditas</h1>
+
+<div>
+  {{#each tienditas}}
+    <a href="/tienditas/detail/{{this._id}}">{{this.name}}</a>
+  {{/each}}
+</div>
